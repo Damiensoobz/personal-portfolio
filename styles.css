@@ -15,11 +15,6 @@
 */
 
 :root {
-    --navbar-bg-color: hsl(0, 0%, 15%);
-    --navbar-text-color: hsl(0, 0%, 85%);
-    --navbar-text-color-focus: white;
-    --navbar-bg-contrast: hsl(0, 0%, 25%);
-
     --ff-primary: 'Ubuntu', sans-serif;
     --ff-secondary: 'Quicksand', sans-serif;
 
@@ -31,15 +26,22 @@
     --tc-secondary: ;
     --tc-accent: ;
 
-    --bg-primary: ;
-    --bg-secondary: ;
+    --bg-primary: #313131;
+    --bg-secondary: #242424;
+    
+
+
+    --fc-primary: #f6f6f6;
+    --fc-secondary: #ffffff;
     
 }
 
 /* css resets */
-body, h1, h2, h3, p, ul, li {
+body, h1, h2, h3, p, ul {
     margin: 0;
     padding: 0;
+    background-color: var(--bg-primary);
+    color: var(--fc-primary)
 }
 
 a {
@@ -81,7 +83,7 @@ body {
     --navbar-height: 64px;
     position: fixed;
     height: var(--navbar-height);
-    background-color: var(--navbar-bg-color);
+    background-color: var(--bg-secondary);
     left: 0;
     right: 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
@@ -99,8 +101,9 @@ body {
     width: 100%;
 }
 
+
 .home-link, .navbar-link {
-    color: var(--navbar-text-color);
+    color: var(--fc-primary);
     text-decoration: none;
     display: flex;
     font-weight: 400;
@@ -108,7 +111,7 @@ body {
 }
 
 .home-link:is(:focus, :hover) {
-    color: var(--navbar-text-color-focus);
+    color: var(--fc-primary);
 }
 
 .navbar-link {
@@ -119,12 +122,12 @@ body {
 }
 
 .navabr-link:is(:focus, :hover) {
-    color: var(--navbar-text-color-focus);
-    background-color: var(--navbar-bg-contrast);
+    color: var(--bg-secondary);
+    background-color: var(--bg-secondary);
 }
 
 .navbar-logo {
-    background-color: var(--navbar-text-color-focus);
+    background-color: var(--fc-primary);
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -149,11 +152,11 @@ body {
     width: 25px;
     height: 4px;
     margin: 2px;
-    background-color: var(--navbar-text-color);
+    background-color: var(--fc-primary);
 }
 
 #navbar-toggle:is(:focus, :hover) .icon-bar {
-    background-color: var(--navbar-text-color-focus);
+    background-color: var(--fc-primary);
 }
 
 #navbar-toggle[aria-expanded='true'] .icon-bar:is(:first-child, :last-child) {
@@ -174,7 +177,7 @@ body {
     transform: rotate(-45deg);
   }
 
-  #navbar-menu {
+#navbar-menu {
     position: fixed;
     top: var(--navbar-height);
     bottom: 0;
@@ -185,7 +188,7 @@ body {
   }
 
 #navbar-toggle[aria-expanded='true'] + #navbar-menu {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: var(--bg-secondary);
     opacity: 1;
     visibility: visible;
   }
@@ -193,7 +196,7 @@ body {
   .navbar-links {
     list-style: none;
     position: absolute;
-    background-color: var(--navbar-bg-color);
+    background-color: var(--bg-secondary);
     display: flex;
     flex-direction: column;
     align-items: center;
