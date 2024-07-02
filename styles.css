@@ -250,6 +250,8 @@ body {
     padding-bottom: 50px;
 }
 
+/*about section */
+
 .about-section {
     display: flex;
     justify-content: center;
@@ -258,12 +260,25 @@ body {
     
 }
 
+
 .about-title {
-    
+    padding-bottom: 15px;
 }
 
 .about-description {
+    padding-bottom: 15px;
+}
+
+.about-gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.about-gallery-image {
     
+    height: 100%;
+    display: block;
 }
 
 
