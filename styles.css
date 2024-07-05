@@ -26,13 +26,13 @@
     --tc-secondary: ;
     --tc-accent: ;
 
-    --bg-primary: #313131;
-    --bg-secondary: #242424;
+    --bg-primary: #000000;
+    --bg-secondary: #f6f6f6;
     
 
 
     --fc-primary: #f6f6f6;
-    --fc-secondary: #ffffff;
+    --fc-secondary: #000000;
     
 }
 
@@ -103,7 +103,7 @@ body {
 
 
 .home-link, .navbar-link {
-    color: var(--fc-primary);
+    color: var(--fc-secondary);
     text-decoration: none;
     display: flex;
     font-weight: 400;
@@ -111,7 +111,7 @@ body {
 }
 
 .home-link:is(:focus, :hover) {
-    color: var(--fc-primary);
+    color: var(--fc-secondary);
 }
 
 .navbar-link {
@@ -152,7 +152,7 @@ body {
     width: 25px;
     height: 4px;
     margin: 2px;
-    background-color: var(--fc-primary);
+    background-color: var(--fc-secondary);
 }
 
 #navbar-toggle:is(:focus, :hover) .icon-bar {
@@ -211,7 +211,7 @@ body {
     padding: 1em;
   }
 
-  /* hero-section */
+/* hero-section */
 .hero-section {
     display: flex;
     justify-content: center;
@@ -251,18 +251,17 @@ body {
 }
 
 /*about section */
-
 .about-section {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    text-align: center;
-    
+    text-align: center
 }
 
 
 .about-title {
-    padding-bottom: 15px;
+    padding-bottom: 30px;
+    font-size: var(--fs-mid);
 }
 
 .about-description {
@@ -273,12 +272,25 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-bottom: 30px;
 }
 
 .about-gallery-image {
-    
-    height: 100%;
-    display: block;
+    width: 250px
+}
+
+.about-services {
+    padding-bottom: 20px;
+}
+
+.services-gallery {
+    width: 100vh;
+    background-color:  	#f6f6f6;
+    color: var(--fc-secondary)
+}
+
+.service-row i {
+    width: 10px;
 }
 
 
