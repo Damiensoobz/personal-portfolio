@@ -284,14 +284,38 @@ body {
 }
 
 .services-gallery {
-    width: 100vh;
-    background-color:  	#f6f6f6;
-    color: var(--fc-secondary)
+    display: flex;
+    flex-direction: row;
+    color: var(--bg-secondary)
 }
 
-.service-row i {
-    width: 10px;
+.service-card {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--fc-secondary);
+    background-color: var(--bg-secondary);
+    margin: 10px;
 }
+
+.service-title {
+    background-color: var(--bg-secondary);
+    color: var(--fc-secondary);
+}
+
+.service-icon {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: var(--fs-large);
+}
+
+.service-description {
+    background-color: var(--bg-secondary);
+    color: var(--fc-secondary);
+    padding-bottom: 10px;
+}
+
 
 
   /* Responsive breakpoints */
