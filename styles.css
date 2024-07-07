@@ -37,11 +37,14 @@
 }
 
 /* css resets */
+
+
 body, h1, h2, h3, p, ul {
     margin: 0;
     padding: 0;
     background-color: var(--bg-primary);
-    color: var(--fc-primary)
+    color: var(--fc-primary);
+    
 }
 
 a {
@@ -283,16 +286,6 @@ body {
     height: 300px;
 }
 
-.about-services {
-    padding-bottom: 20px;
-}
-
-.services-gallery {
-    display: flex;
-    flex-direction: row;
-    color: var(--bg-secondary)
-}
-
 .service-card {
     padding-top: 15px;
     display: flex;
@@ -300,7 +293,8 @@ body {
     justify-content: center;
     color: var(--fc-secondary);
     background-color: var(--bg-secondary);
-    margin: 1px;
+    margin: 5px;
+      
 }
 
 .service-title {
@@ -319,6 +313,78 @@ body {
     color: var(--fc-secondary);
     padding-bottom: 10px;
 }
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 20px;
+
+    grid-template-areas: 
+    "service1 service2 service3"
+    "service4 service5 service6";
+
+    margin: 0 auto;
+    justify-items: center;
+    padding: 3rem;
+    background: var(--bg-primary);
+    color: var(--fc-primary);
+    width: 1200px;
+}
+
+.service1 {grid-area: service1;}
+.service2 {grid-area: service2;}
+.service3 {grid-area: service3;}
+.service4 {grid-area: service4;}
+.service5 {grid-area: service5;}
+.service6 {grid-area: service6;}
+
+.card {
+    perspective: 40rem;
+    width: 350px;
+    height: 200px;
+    display: flex;
+    transition: transform calc(var(--time) / 4);
+    text-decoration: none;
+    color: var(--fc-secondary);
+    
+    &:active {
+      transform: scale(0.975);
+    }
+
+}
+
+.card-body {
+    display: flex;
+    transform-style: preserve-3d;
+    transition: 0.707s transform;
+    
+
+    .card:hover & {
+        transform: rotateX(-180deg)
+    }
+
+    border-radius: 0.25rem;
+    flex: 1;
+}
+
+.card-front, .card-back {
+    backface-visibility: hidden;
+    min-width: 100%;
+
+    display: flex;
+    align-items: center;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    border-radius: 0.25rem;
+}
+
+.card-back {
+    transform: rotateX(-180deg) translate(-100%, 0)
+}
+
 
 
 
