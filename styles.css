@@ -90,6 +90,7 @@ body {
     width: 100%;
     top: 0;
     left: 0;
+    transition: top 0.5s;
 }
 
 .navbar-container {
@@ -285,6 +286,8 @@ body {
     width: 300px;
     height: 300px;
 }
+
+/* services section */
 
 .service-card {
     padding-top: 15px;
