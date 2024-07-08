@@ -138,7 +138,7 @@ body {
 }
 
 .navbar-logo {
-    background-color: var(--fc-primary);
+    background-color: var(--fc-secondary);
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -167,7 +167,7 @@ body {
 }
 
 #navbar-toggle:is(:focus, :hover) .icon-bar {
-    background-color: var(--fc-primary);
+    background-color: var(--fc-secondary);
 }
 
 #navbar-toggle[aria-expanded='true'] .icon-bar:is(:first-child, :last-child) {
@@ -199,7 +199,7 @@ body {
 }
 
 #navbar-toggle[aria-expanded='true']+#navbar-menu {
-    background-color: var(--bg-secondary);
+    background-color: var(--fc-secondary);
     opacity: 1;
     visibility: visible;
 }
