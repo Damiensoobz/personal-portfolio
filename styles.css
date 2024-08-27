@@ -25,13 +25,13 @@
     --tc-secondary: ;
     --tc-accent: ;
 
-    --bg-primary: #000000;
-    --bg-secondary: #f6f6f6;
+    --bg-primary: #070F2B;
+    --bg-secondary: white;
 
 
 
-    --fc-primary: #f6f6f6;
-    --fc-secondary: #000000;
+    --fc-primary: white;
+    --fc-secondary: #070F2B;
 
 }
 
